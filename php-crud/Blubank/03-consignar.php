@@ -33,7 +33,7 @@
                         <div class="col mt-3">
                             <strong>Tipo de cuenta</strong>
                             <select name="tipo_cuenta" class="form-select" readonly>
-                                <option value="ahorro <?php if($tipocuenta == 'ahorro'){echo 'selected';}?>">Ahorro</option>
+                                <option value="ahorro" <?php if($tipocuenta == 'ahorro'){echo 'selected';}?>>Ahorro</option>
                                 <option value="corriente" <?php if($tipocuenta == 'corriente'){echo 'selected';}?>>Corriente</option>
                             </select>
                         </div>
