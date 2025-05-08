@@ -41,6 +41,10 @@
                             <strong>Monto a consignar</strong>
                             <input name="monto" type="number" class="form-control" placeholder="Monto minimo $10.000">
                         </div>
+                        <div class="col mt-3">
+                            <strong>Fecha</strong>
+                            <input name="fecha" type="date" class="form-control" value="<?php echo date('Y-m-d');?>" readonly>
+                        </div>
                         <div class="col text-center mt-3">
                             <button class="btn btn-secondary"><a class="text-decoration-none text-white" href="index.php">Volver</a></button>
                             <button type="submit" class="btn btn-success">Consignar</button>

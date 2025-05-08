@@ -33,8 +33,6 @@
                             <a class="nav-link text-primary" href="01-registrar.php">Registrar cuenta</a>
                         </div>
                     </div>
-                    
-                    
                 </div>
             </form>
             
@@ -48,7 +46,7 @@
                                     <p class="fs-4">Primero Ingrese su número de cuenta en el buscador.</p>
                                 </div>
                             <?php
-                        };
+                        }
 
                         if(isset($_POST['buscar'])){
                             $busqueda = $_POST['buscar'];
@@ -105,6 +103,12 @@
                             }
                         }
                     ?>
+                </div>
+            </div>
+
+            <div class="row my-4">
+                <div class="col text-center">
+                    <a class="text-decoration-none" href="09-historial.php">Consultar Historial</a>
                 </div>
             </div>
         </div>

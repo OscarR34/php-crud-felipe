@@ -33,13 +33,17 @@
                         <div class="col mt-3">
                             <strong>Tipo de cuenta</strong>
                             <select name="tipo_cuenta" class="form-select" readonly>
-                                <option value="ahorro <?php if($tipocuenta == 'ahorro'){echo 'selected';}?>">Ahorro</option>
+                                <option value="ahorro" <?php if($tipocuenta == 'ahorro'){echo 'selected';}?>>Ahorro</option>
                                 <option value="corriente" <?php if($tipocuenta == 'corriente'){echo 'selected';}?>>Corriente</option>
                             </select>
                         </div>
                         <div class="col mt-3">
                             <strong>Monto a retirar</strong>
                             <input name="monto" type="number" class="form-control" placeholder="Monto minimo $10.000">
+                        </div>
+                        <div class="col mt-3">
+                            <strong>Fecha</strong>
+                            <input name="fecha" type="date" class="form-control" value="<?php echo date('Y-m-d');?>" readonly>
                         </div>
                         <div class="col text-center mt-3">
                             <button class="btn btn-secondary"><a class="text-decoration-none text-white" href="index.php">Volver</a></button>

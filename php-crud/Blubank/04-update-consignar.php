@@ -5,6 +5,8 @@
     $tipocuenta = $_POST['tipo_cuenta'];
     $monto_actual = 0;
     $retiro = 0;
+    $fecha = $_POST['fecha'];
+    $transaccion = 'Consignación';
 
     $consulta = $conexion->query("SELECT * FROM bancocuentas WHERE Cuenta = '$cuenta'");
 
@@ -19,6 +21,8 @@
         $monto_actual += $nuevo_monto;
 
         $conexion->query("UPDATE bancocuentas set Cuenta = '$cuenta', Tipocuenta = '$tipocuenta', Saldo = '$monto_actual', Retiros = '$retiro' WHERE Cuenta = '$cuenta'");
+
+        $conexion->query("INSERT INTO movimientos (Cuenta, Transaccion, Monto, Fecha) VALUES ('$cuenta', '$transaccion', '$nuevo_monto', '$fecha')");
 
         ?>
         <!doctype html>
